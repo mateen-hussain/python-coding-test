@@ -40,7 +40,7 @@ Alternatively it's possible to `pip install` directly using the
 
 ## Dev notes
 Functional programming was preferred over class based. 
-As it makes it easy to write unit tests and makes the code modular.
+As it makes it easy to write unit tests.
 
 Happy to use class based (if needed).
 
@@ -52,6 +52,12 @@ Happy to use class based (if needed).
 5. Alternatively use your choice of Postman or curl
 6. The REST api built is a `post` and you need to upload a PDF (mimicking actual PDF upload)
    1. Make sure the filename uploaded is what is expected to test (or upload the file from assets folder)
+   2. Please read the description of the API in swagger to understand the output
+
+#### Screenshot of working examples
+![Alt text](/readme-screenshots/Screenshot 2024-05-27-1.png)
+
+![Alt text](/readme-screenshots/Screenshot 2024-05-27-2.png)
 
 ### Unit tests
 1. Solitary unit tests pattern was preferred (happy to use sociable too)
@@ -59,6 +65,9 @@ Happy to use class based (if needed).
 3. every testable package has a `tests` folder
 4. to run tests `make test`
 
-### Format and lint
+### Code Format
 1. Code uses black, flake8, autopep and isort to lint and format code
 2. run `make format`
+
+### Pre-commit hook
+1. Runs format and test on commit
