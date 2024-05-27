@@ -1,10 +1,12 @@
 from dotenv import load_dotenv
 from fastapi import APIRouter, FastAPI, File, UploadFile
 
-from src.handlers import discrepancy_checker
 from src.handlers.models import discrepancy_checker_resp, error_resp
 
 load_dotenv()
+
+from src.handlers import discrepancy_checker  # noqa: E402
+
 app = FastAPI()
 v1_router = APIRouter(prefix="/v1")
 
