@@ -55,9 +55,9 @@ Happy to use class based (if needed).
    2. Please read the description of the API in swagger to understand the output
 
 #### Screenshot of working examples
-![Alt text](/readme-screenshots/Screenshot 2024-05-27-1.png)
+![Alt text](/readme-screenshots/Screenshot-1.png)
 
-![Alt text](/readme-screenshots/Screenshot 2024-05-27-2.png)
+![Alt text](/readme-screenshots/Screenshot-2.png)
 
 ### Unit tests
 1. Solitary unit tests pattern was preferred (happy to use sociable too)
