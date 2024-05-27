@@ -1,0 +1,2 @@
+[run]
+omit=src/pdf_service.py,src/handlers/models/*,
