@@ -8,7 +8,37 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.111.0"
+pandas = "^2.2.2"
+pydantic = "^2.7.1"
+python-dotenv = "^1.0.1"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+black = "^24.4.2"
+pytest-asyncio = "^0.23.7"
+reportlab = "^4.2.0"
+autoflake = "^2.3.1"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+pytest-cov = "^5.0.0"
+pre-commit = "^3.7.1"
+
+[tool.autoflake]
+remove-all-unused-imports = true
+exclude = "src/pdf_service.py"
+recursive = true
+check = true
+remove-unused-variables = true
+
+[tool.black]
+exclude = "src/pdf_service.py"
+
+[tool.isort]
+skip = "src/pdf_service.py"
+
+[tool.pytest.ini_options]
+addopts = "--cov=src"
 
 [build-system]
 requires = ["poetry-core"]

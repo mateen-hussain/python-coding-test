@@ -36,3 +36,29 @@ was generated using version `1.8.3`
 
 Alternatively it's possible to `pip install` directly using the
 `pyproject.toml` or `requirements.txt`.
+---------------
+
+## Dev notes
+Functional programming was preferred over class based. 
+As it makes it easy to write unit tests and makes the code modular.
+
+Happy to use class based (if needed).
+
+### Run app
+1. Install packages `make install`
+2. create `.env` file at root of repo (rename `.env.example`)
+3. Run service `make dev`
+4. To test the app, go to `http://localhost:8000/docs#` for swagger docs 
+5. Alternatively use your choice of Postman or curl
+6. The REST api built is a `post` and you need to upload a PDF (mimicking actual PDF upload)
+   1. Make sure the filename uploaded is what is expected to test (or upload the file from assets folder)
+
+### Unit tests
+1. Solitary unit tests pattern was preferred (happy to use sociable too)
+2. Used pytest framework instead of inbuilt unittest
+3. every testable package has a `tests` folder
+4. to run tests `make test`
+
+### Format and lint
+1. Code uses black, flake8, autopep and isort to lint and format code
+2. run `make format`
